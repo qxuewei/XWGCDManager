@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E2F0CBA1E6D3C4A00CBDDF6 /* XWGCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E2F0CB91E6D3C4A00CBDDF6 /* XWGCDGroup.m */; };
 		2E3434E21E6983C2006D25FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3434E11E6983C2006D25FC /* main.m */; };
 		2E3434E51E6983C2006D25FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3434E41E6983C2006D25FC /* AppDelegate.m */; };
 		2E3434E81E6983C2006D25FC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E3434E71E6983C2006D25FC /* ViewController.m */; };
@@ -28,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E2F0CB81E6D3C4A00CBDDF6 /* XWGCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWGCDGroup.h; sourceTree = "<group>"; };
+		2E2F0CB91E6D3C4A00CBDDF6 /* XWGCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWGCDGroup.m; sourceTree = "<group>"; };
 		2E3434DD1E6983C2006D25FC /* XWGCDManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XWGCDManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E3434E11E6983C2006D25FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E3434E31E6983C2006D25FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 			children = (
 				2E3435061E6983D7006D25FC /* XWGCDManager.h */,
 				2E3435071E6983D7006D25FC /* XWGCDManager.m */,
+				2E2F0CB81E6D3C4A00CBDDF6 /* XWGCDGroup.h */,
+				2E2F0CB91E6D3C4A00CBDDF6 /* XWGCDGroup.m */,
 			);
 			path = XWGCDManager;
 			sourceTree = "<group>";
@@ -230,6 +235,7 @@
 				2E3435081E6983D7006D25FC /* XWGCDManager.m in Sources */,
 				2E3434E51E6983C2006D25FC /* AppDelegate.m in Sources */,
 				2E3434E21E6983C2006D25FC /* main.m in Sources */,
+				2E2F0CBA1E6D3C4A00CBDDF6 /* XWGCDGroup.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +432,7 @@
 				2E3435011E6983C2006D25FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E3435021E6983C2006D25FC /* Build configuration list for PBXNativeTarget "XWGCDManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +441,7 @@
 				2E3435041E6983C2006D25FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

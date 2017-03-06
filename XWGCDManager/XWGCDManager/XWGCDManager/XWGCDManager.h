@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "XWGCDGroup.h"
 
 @interface XWGCDManager : NSObject
 /// 主线程执行
@@ -31,4 +32,14 @@
 + (void)executeInBackgroundPriorityGlobalQueue:(dispatch_block_t)block afterDelaySecs:(NSTimeInterval)sec;
 /// 当前是否在主线程
 + (BOOL)isMainQueue;
+/// 在线程组添加异步任务
+- (void)execute:(dispatch_block_t)block inGroup:(XWGCDGroup *)group;
+/// 监听某异步线程组中操作完成执行任务
+- (void)notify:(dispatch_block_t)block inGroup:(XWGCDGroup *)group;
+
++ (XWGCDManager *)mainQueue;
++ (XWGCDManager *)globalQueue;
++ (XWGCDManager *)highPriorityGlobalQueue;
++ (XWGCDManager *)lowPriorityGlobalQueue;
++ (XWGCDManager *)backgroundPriorityGlobalQueue;
 @end

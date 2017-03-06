@@ -14,9 +14,11 @@ static XWGCDManager *highPriorityGlobalQueue;
 static XWGCDManager *lowPriorityGlobalQueue;
 static XWGCDManager *backgroundPriorityGlobalQueue;
 static uint8_t mainQueueMarker[] = {0};
+
 @interface XWGCDManager ()
 @property (nonatomic, strong, readwrite) dispatch_queue_t dispatchQueue;
 @end
+
 @implementation XWGCDManager
 #pragma mark - 类 初始化
 + (void)initialize {
@@ -146,6 +148,18 @@ static uint8_t mainQueueMarker[] = {0};
 + (BOOL)isMainQueue {
     
     return dispatch_get_specific(mainQueueMarker) == mainQueueMarker;
+}
+
+- (void)execute:(dispatch_block_t)block inGroup:(XWGCDGroup *)group {
+    
+    NSParameterAssert(block);
+    dispatch_group_async(group.dispatchGroup, self.dispatchQueue, block);
+}
+
+- (void)notify:(dispatch_block_t)block inGroup:(XWGCDGroup *)group {
+    
+    NSParameterAssert(block);
+    dispatch_group_notify(group.dispatchGroup, self.dispatchQueue, block);
 }
 
 
